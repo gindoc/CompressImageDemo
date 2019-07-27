@@ -12,10 +12,7 @@ import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.View
 import android.widget.Toast
-import me.gindoc.compressimagedemo.utils.CachePathUtils
 import me.gindoc.compressimagedemo.utils.CommonUtils
-import me.gindoc.compressimagedemo.utils.CommonUtils.getCameraIntent
-import me.gindoc.compressimagedemo.utils.CommonUtils.hasCamera
 import me.gindoc.compressimagedemo.utils.Constants
 import me.gindoc.compressor.CompressImageManager
 import me.gindoc.compressor.bean.Photo
@@ -37,6 +34,18 @@ class MainActivity : AppCompatActivity(), CompressImage.CompressListener {
         setContentView(R.layout.activity_main)
 
         compressConfig = CompressConfig.getDefaultConfig()
+
+//        CompressConfig.Builder()
+//            .setEnablePixelCompress(true)
+//            .setEnableQualityCompress(true)
+//            .setCompressFormat(Bitmap.CompressFormat.JPEG)
+//            .setEnableReserveRaw(true)
+//            .setMaxWidth(480)
+//            .setMaxHeight(800)
+//            .setMaxSize(300*1024)
+//            .setQuality(75)
+//            .setCacheDir(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).absolutePath)
+//            .build()
 
         compressConfig?.isEnableQualityCompress =false
     }
