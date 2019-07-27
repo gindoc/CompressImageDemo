@@ -1,0 +1,24 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="me.gindoc.compressor">
+
+
+    <application>
+
+        <meta-data
+            android:name="provider_auth"
+            android:value="${AUTHORITIES}" />
+
+        <provider
+            android:name=".provider.CustomeFileProvider"
+            android:authorities="${AUTHORITIES}"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+
+    </application>
+</manifest>
